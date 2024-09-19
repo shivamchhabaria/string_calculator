@@ -1,13 +1,18 @@
 
 
-<div class="div_input">
+<div class="div-input">
     <mat-form-field class="example-form-field" appearance="outline">
       <mat-label>Enter value</mat-label>
-      <textarea matInput [(ngModel)]="value" ></textarea>
-        <button matSuffix mat-icon-button  (click)="onClick()">
+      <input matInput type="text" [(ngModel)]="value">
+      <button matSuffix mat-icon-button  (click)="onClick()">
           <mat-icon>arrow_forward</mat-icon>
         </button>
+        <mat-hint>Enter value and click on arrow button</mat-hint>
     </mat-form-field>
+
+    <div class="div-result">
+      Result : {{result}}
+    </div>
   </div>
 
 <router-outlet />

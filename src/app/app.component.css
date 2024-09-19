@@ -1,0 +1,11 @@
+.div-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+}
+
+.div-result{
+    margin: 20px;
+}

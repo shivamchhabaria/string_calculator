@@ -12,7 +12,8 @@ import { StringCalculatorService } from './string-calculator.service';
 })
 export class AppComponent {
   title = 'string-calculator';
-  value: any;
+  value: string | undefined;
+  result : number | undefined
   constructor(
     private stringCalculaterService : StringCalculatorService
   ){}
@@ -20,7 +21,7 @@ export class AppComponent {
   onClick() {
     this.value =  JSON.stringify(this.value)
     this.value = JSON.parse(this.value)
-    const result = this.stringCalculaterService.add(this.value +'')
+    this.result = this.stringCalculaterService.add(this.value +'')
 
   }
 }
