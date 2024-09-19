@@ -5,10 +5,16 @@ import { SharedModule } from './shared.module';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,SharedModule],
+  imports: [RouterOutlet, SharedModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'string-calculator';
+  value: any;
+
+  onClick() {
+    this.value =  JSON.stringify(this.value)
+    this.value = JSON.parse(this.value)
+  }
 }
