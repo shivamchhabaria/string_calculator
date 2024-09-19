@@ -31,7 +31,7 @@ describe('StringCalculatorService', () => {
   });
 
   it('should handle newlines between numbers', () => {
-    expect(service.add('1\n2,3')).toBe(6);
+    expect(service.add('1\\n2,3')).toBe(6);
   });
 
   it('should handle different delimiters', () => {
